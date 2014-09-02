@@ -7,4 +7,10 @@ Class Bootstrapped extends CWidget{
             return implode(' ', $this->classes);
         }
     }
+
+    public function containerClass(){
+        if(isset($this->fluid)){
+            return ($this->fluid===true) ? 'container-fluid' : 'container';
+        }
+    }
 }

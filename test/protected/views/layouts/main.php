@@ -32,7 +32,7 @@
     'classes'=>array(
         'navbar-inverse',
         'navbar-fixed-top'
-    )
+    ),
 )); ?>
 
 <?php echo $content ?>

@@ -1,8 +1,8 @@
-<nav class="navbar navbar-default <?php echo $this->getClasses(); ?>" role="navigation">
-    <div class="container-fluid">
+<nav id="<?php echo $this->element_id ?>" class="navbar navbar-default <?php echo $this->getClasses(); ?>" role="navigation">
+    <div class="<?php echo $this->containerClass(); ?>">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#<?php echo $this->element_id ?>-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -12,7 +12,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="<?php echo $this->element_id ?>-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
