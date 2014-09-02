@@ -1,32 +1,48 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+*.iml
+*.ipr
+*.iws
+.idea/
+nbproject/
+nbactions.xml
+nb-configuration.xml
 
-# Folder config file
-Desktop.ini
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# External tool builders
+.externalToolBuilders/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# =========================
-# Operating System Files
-# =========================
+# CDT-specific
+.cproject
 
-# OSX
-# =========================
+# PDT-specific
+.buildpath
+
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
 
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must ends with two \r.
-Icon
 
 # Thumbnails
 ._*
@@ -34,3 +50,16 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# SublimeText project files
+/*.sublime-project
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+.*.sw[a-z]
+*.un~
+Session.vim
