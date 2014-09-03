@@ -28,12 +28,70 @@
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<?php $this->widget('NavbarWidget', array(
+<?php
+$main_links = NavbarWidget::buildLinks(array(
+    'position'=>'left',
+    'links' => array(
+        array(
+        'route'=>array('/site/index'),
+        'title'=>'Home',
+        ),
+        array(
+            'route'=>'/site/contact',
+            'title'=>'Contact',
+        ),
+
+        array(
+            'title' => 'Dropdown List',
+            'children'=> array(
+                array(
+                    'route'=>array('/site/index'),
+                    'title'=>'aHome',
+                ),
+                array(
+                    'route'=>'/site/contact',
+                    'title'=>'aContact',
+                ),
+                array(
+                    'route'=>array('/site/pages', array('view'=>'about')),
+                    'title'=>'aAbout',
+                ),
+            )
+        )
+    )
+));
+
+$user_links = NavbarWidget::buildLinks(array(
+    'position'=>'right',
+    'links'=>array(
+        array(
+            'title' => 'User',
+            'children'=> array(
+                array(
+                    'route'=>array('/site/account'),
+                    'title'=>'My Account',
+                ),
+                array(
+                    'route'=>'/site/logout',
+                    'title'=>'Logout',
+                ),
+            )
+        )
+    )
+));
+
+$this->widget('NavbarWidget', array(
     'classes'=>array(
         'navbar-inverse',
         'navbar-fixed-top'
     ),
-)); ?>
+    'sections'=>array(
+        $main_links,
+        $user_links
+    )
+));
+
+?>
 
 <?php echo $content ?>
 
